@@ -1,0 +1,230 @@
+/*------------componentes en crudo-------*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: flexbox;
+}
+
+/*---------------menú lfotante------*/
+.main-nav{
+    background-color: rgb(238, 238, 238, .95);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+   }
+   
+   .nav{
+       width: max-content;
+       margin: 0 auto;
+   }
+   
+   .nav__item{
+       display: inline-block;
+       margin: 0 1rem;
+   }
+   
+   .nav__item a{
+       color: #777;
+       display: inline-block;
+       padding: .5rem 0;
+       
+   }
+   .nav__item a:hover{
+       border-bottom: solid 4px #777;
+   }
+
+/*---------primer seccion*/
+.Cont1{
+    background-color: #47AA94;
+    height: 350px;
+    width: 100vw;
+    justify-content: center;
+	align-items: center;
+}
+
+.Frase-init{
+    background-color: cornflowerblue;
+    margin: auto;
+    height: 8rem;
+    width: 40rem;
+}
+
+/*---------segunda seccion*/
+
+.Cont2{
+    background-color: rgb(250, 101, 46);
+    height: 350px;
+    width: 100vw;
+    display: flex;
+}
+
+.imgA{
+    background-color: crimson;
+    height: 100%;
+    width: 50%;
+
+}
+
+.texto2{
+    padding: auto;
+    background-color: rgb(104, 11, 30);
+    height: 100%;
+    width: 50%;
+    font-size: xx-large;
+}
+
+/*---------tercera seccion*/
+.Cont3{
+    display: block;
+    background-color: rgb(18, 141, 131);
+    height: 26rem;
+    width: 100vw;
+    justify-content: center;
+	align-items: center;
+}
+
+.contenedor{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    perspective: 150px;
+    margin: auto;
+
+}
+
+ .tarjeta{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: 1s;
+        margin: 2rem;
+    }
+
+    [class*="lado"]{
+        width: 15rem;
+        height: 20rem;
+        border-radius: 1rem;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 1s;
+        overflow: hidden;
+    }
+
+    .lado-A{
+        display: flex;
+        margin: auto;
+        background-color: darkgreen;
+    }
+
+
+    .lado-A h2{
+        font-size: xx-large;
+        color: aliceblue;
+
+    }
+
+    .lado-B{
+        transform: rotateY(180deg);
+        transition: 1s;
+        background-color: darksalmon;
+    }
+
+    [class*="T"]{
+        width: 15rem;
+        height: 12rem;
+    
+    }
+
+    /*-----------hovers*/
+
+    .tarjeta:hover .lado-A{
+        transform: rotateY(180deg);
+    }
+
+    .tarjeta:hover .lado-B{
+        transform: rotateY(360deg);
+    }
+
+    .tarjeta:hover{
+        transform: scale(1.2);        
+    }
+
+    /*----------- caurta secion*/
+    .Cont4{
+        background-color: rgb(49, 158, 6);
+        height: 350px;
+        width: 100vw;
+        display: flex;
+    }
+    
+    .imgB{
+        background-color: rgb(20, 220, 87);
+        height: 100%;
+        width: 50%;
+    
+    }
+    
+    .texto3{
+        padding: auto;
+        background-color: rgb(8, 214, 8);
+        height: 100%;
+        width: 50%;
+        font-size: xx-large;
+    }
+
+    /*--------- quina parte */
+    .Cont3 {
+        background-color: rgb(223, 226, 226);
+    
+    }
+    
+    
+    .Ch3contenedor{
+        overflow: hidden;
+        padding: 0.3rem;
+        height: 10rem;
+        width: 80%;
+        margin: 0.5rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.3rem;
+    }
+    
+    
+    .Ch3ContItem {
+        border-radius: .5rem;
+        overflow: hidden;
+    
+    }
+    
+    .Ch3ContItem:hover {
+        transform: scale(1.05);
+        border-radius: .5rem;
+    
+    
+    }
+    
+    .oculto{ 
+        display: none;
+    }
+    
+    .Ch3ContItem img{
+        max-height: 100%;
+        transition: 0.5s;
+        filter: grayscale(100%);
+    }
+    
+    
+    .Ch3ContItem:hover img{
+        filter: grayscale(0%);
+        transform: scale(1.5);
+        justify-content: center;
+    
+    
+    }
+    
